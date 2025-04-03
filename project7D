@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ugly Meme Page</title>
+    <link rel="stylesheet" href="ugly_styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Comic Sans MS, cursive, sans-serif;
+        }
+
+        body {
+            background: repeating-linear-gradient(45deg, red, yellow 10%, green 20%);
+            color: lime;
+            text-align: center;
+            animation: spinBg 5s infinite linear;
+        }
+
+        @keyframes spinBg {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        .title {
+            font-size: 3rem;
+            text-shadow: 5px 5px 0px magenta;
+        }
+
+        .content {
+            font-size: 2rem;
+            background: pink;
+            width: 70%;
+            margin: 50px auto;
+            border: 10px dotted blue;
+            padding: 20px;
+        }
+
+        .floating-box {
+            position: absolute;
+            top: 50px;
+            left: 30%;
+            background: orange;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 1.5rem;
+            animation: bounce 2s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(50px); }
+        }
+
+        .weird-box {
+            float: right;
+            width: 150px;
+            height: 150px;
+            background: purple;
+            transform: rotate(45deg);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: black;
+            color: white;
+            padding: 10px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                background: black;
+                color: red;
+            }
+            .content {
+                transform: rotate(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="title">Ugly Layout</h1>
+    </header>
+    <main>
+        <div class="content">
+            <p>Everything is ugly here.</p>
+        </div>
+        <div class="floating-box">Floating Chaos</div>
+        <div class="weird-box">Weird Box</div>
+    </main>
+    <footer>
+        <p>Hello Hello Hello.</p>
+    </footer>
+</body>
+</html>
